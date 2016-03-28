@@ -1,0 +1,16 @@
+[
+    {
+      "modid": "devoxx4kids-quebec",
+      "name": "Devoxx4Kids Quebec",
+      "description": "Devoxx4Kids sample mod",
+      "version": "${version}",
+      "mcversion": "${mcversion}",
+      "url": "",
+      "updateUrl": "",
+      "authorList": ["ExampleDude"],
+      "credits": "The Devoxx4kids",
+      "logoFile": "",
+      "screenshots": [],
+      "dependencies": []
+    }
+]
