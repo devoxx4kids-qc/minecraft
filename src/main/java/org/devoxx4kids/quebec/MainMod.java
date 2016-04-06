@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import org.devoxx4kids.quebec.item.MyItem;
+import org.devoxx4kids.quebec.item.Ovomaltine;
 
 @Mod(modid = MainMod.MODID, version = MainMod.VERSION)
 public class MainMod {
@@ -28,15 +29,23 @@ public class MainMod {
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
         MyItem item = new MyItem();
+        Ovomaltine ovomaltine = new Ovomaltine(20, 0.3F, true);
 
         if (event.getSide() == Side. CLIENT) {
             RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
             renderItem.getItemModelMesher().register(item, 0, new ModelResourceLocation(MODID + ":" + "myItem" , "inventory"));
+            renderItem.getItemModelMesher().register(ovomaltine, 0, new ModelResourceLocation(MODID + ":" + "ovomaltine" , "inventory"));
 
             GameRegistry.addRecipe(new ItemStack(item),
                     "X ",
                     "X ",
                     'X', Blocks.dirt);
+
+            GameRegistry.addRecipe(new ItemStack(ovomaltine),
+                    "X ",
+                    " X",
+                    'X', Blocks.dirt);
+
 
         }
     }
