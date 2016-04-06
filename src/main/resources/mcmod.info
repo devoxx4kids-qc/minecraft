@@ -1,6 +1,6 @@
 [
     {
-      "modid": "devoxx4kids-quebec",
+      "modid": "devoxx4kids_quebec",
       "name": "Devoxx4Kids Quebec",
       "description": "Devoxx4Kids sample mod",
       "version": "${version}",
